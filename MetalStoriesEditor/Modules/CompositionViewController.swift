@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CompositionViewController: UIViewController {
+final class CompositionViewController: UIViewController {
     
     override func loadView() {
         self.view = createView()
@@ -29,6 +29,7 @@ class CompositionViewController: UIViewController {
         
         let contentView = UI.makeContentView()
         view.addSubview(contentView)
+        contentView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(openGallery)))
         contentView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             contentView.topAnchor.constraint(equalTo: playButton.bottomAnchor, constant: 8),
@@ -40,6 +41,7 @@ class CompositionViewController: UIViewController {
         return view
     }
     
+    //To not spam viewcontroller with useless functions
     private struct UI {
         static func makePlayButton() -> UIButton {
             let button = UIButton()
@@ -101,6 +103,11 @@ class CompositionViewController: UIViewController {
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         .lightContent
+    }
+    
+    @objc private func openGallery() {
+        let galleryVC = ImageGalleryViewController()
+        present(galleryVC, animated: true)
     }
 }
 
