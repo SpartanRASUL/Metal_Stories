@@ -64,7 +64,7 @@ final class ImageGalleryViewController: UIViewController {
     }
     
     //MARK: - Logic
-    
+    //TODO
     
 }
 

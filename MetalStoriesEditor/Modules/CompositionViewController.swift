@@ -22,6 +22,7 @@ final class CompositionViewController: UIViewController {
         let playButton = UI.makePlayButton()
         view.addSubview(playButton)
         playButton.translatesAutoresizingMaskIntoConstraints = false
+        playButton.addTarget(self, action: #selector(openRenderView), for: .touchUpInside)
         NSLayoutConstraint.activate([
             playButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 8),
             playButton.centerXAnchor.constraint(equalTo: view.centerXAnchor)
@@ -108,6 +109,15 @@ final class CompositionViewController: UIViewController {
     @objc private func openGallery() {
         let galleryVC = ImageGalleryViewController()
         present(galleryVC, animated: true)
+    }
+    
+    @objc private func openRenderView() {
+        let renderView = RenderVideoViewController()
+        renderView.renderer = LinearTransitionRenderer(
+            image: UIImage(named: "testimg")!,
+            overlayColor: .white
+        )
+        present(renderView, animated: true)
     }
 }
 

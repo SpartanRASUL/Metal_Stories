@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		906289422586AC51009010C9 /* RenderVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906289412586AC51009010C9 /* RenderVideoViewController.swift */; };
+		90A07220258A76DE003645F1 /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A0721F258A76DE003645F1 /* Renderer.swift */; };
+		90A07224258A7EF3003645F1 /* default.metal in Sources */ = {isa = PBXBuildFile; fileRef = 90A07223258A7EF3003645F1 /* default.metal */; };
 		90AE9426257301FC001A99F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90AE9425257301FC001A99F5 /* AppDelegate.swift */; };
 		90AE942A257301FC001A99F5 /* CompositionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90AE9429257301FC001A99F5 /* CompositionViewController.swift */; };
 		90AE942F257301FF001A99F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90AE942E257301FF001A99F5 /* Assets.xcassets */; };
@@ -17,6 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		906289412586AC51009010C9 /* RenderVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenderVideoViewController.swift; sourceTree = "<group>"; };
+		90A0721F258A76DE003645F1 /* Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
+		90A07223258A7EF3003645F1 /* default.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = default.metal; sourceTree = "<group>"; };
 		90AE9422257301FC001A99F5 /* MetalStoriesEditor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetalStoriesEditor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90AE9425257301FC001A99F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		90AE9429257301FC001A99F5 /* CompositionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositionViewController.swift; sourceTree = "<group>"; };
@@ -39,6 +45,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		906289402586AB89009010C9 /* RenderVideo */ = {
+			isa = PBXGroup;
+			children = (
+				906289412586AC51009010C9 /* RenderVideoViewController.swift */,
+			);
+			path = RenderVideo;
+			sourceTree = "<group>";
+		};
+		90A07222258A7CE9003645F1 /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				90A07223258A7EF3003645F1 /* default.metal */,
+			);
+			path = Shaders;
+			sourceTree = "<group>";
+		};
 		90AE9419257301FC001A99F5 = {
 			isa = PBXGroup;
 			children = (
@@ -71,6 +93,8 @@
 		90D7885C25741310000B2AD0 /* Rendering */ = {
 			isa = PBXGroup;
 			children = (
+				90A07222258A7CE9003645F1 /* Shaders */,
+				90A0721F258A76DE003645F1 /* Renderer.swift */,
 			);
 			path = Rendering;
 			sourceTree = "<group>";
@@ -78,6 +102,7 @@
 		90D7885D2574131F000B2AD0 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				906289402586AB89009010C9 /* RenderVideo */,
 				90D7885E25741330000B2AD0 /* ImageGallery */,
 				90AE9429257301FC001A99F5 /* CompositionViewController.swift */,
 			);
@@ -165,7 +190,10 @@
 			files = (
 				90AE942A257301FC001A99F5 /* CompositionViewController.swift in Sources */,
 				90AE9426257301FC001A99F5 /* AppDelegate.swift in Sources */,
+				90A07220258A76DE003645F1 /* Renderer.swift in Sources */,
+				906289422586AC51009010C9 /* RenderVideoViewController.swift in Sources */,
 				90D7886725741CDD000B2AD0 /* ImageGalleryItemCell.swift in Sources */,
+				90A07224258A7EF3003645F1 /* default.metal in Sources */,
 				90FC664E257D3FDC00BEC3D0 /* ImageGalleryItem.swift in Sources */,
 				90D788602574134D000B2AD0 /* ImageGalleryViewController.swift in Sources */,
 			);
