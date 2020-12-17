@@ -53,6 +53,9 @@ final class RenderVideoViewController: UIViewController {
             mtkView.heightAnchor.constraint(equalTo: mtkView.widthAnchor, multiplier: 16/9)
         ])
         
+        if let drawableSize = renderer?.drawableSize {
+            mtkView.drawableSize = drawableSize
+        }
         mtkView.delegate = self
         mtkView.framebufferOnly = false
         
